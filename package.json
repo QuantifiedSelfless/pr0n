@@ -1,0 +1,38 @@
+{
+  "name": "romance-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuantifiedSelfless/Romance-Game.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuantifiedSelfless/Romance-Game/issues"
+  },
+  "homepage": "https://github.com/QuantifiedSelfless/Romance-Game#readme",
+  "dependencies": {
+    "babel-preset-es2015": "^6.6.0",
+    "babelify": "^7.2.0",
+    "basscss": "^8.0.1",
+    "browserify": "^13.0.0",
+    "eslint-plugin-react": "^4.3.0",
+    "flex-object": "^2.0.5",
+    "flux": "^2.1.1",
+    "gulp": "^3.9.1",
+    "gulp-eslint": "^2.0.0",
+    "install": "^0.6.1",
+    "jquery": "^2.2.2",
+    "npm": ">=3.8.6",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-router-component": "^0.31.4",
+    "reactify": "^1.1.1",
+    "vinyl-source-stream": "^1.1.0"
+  }
+}
