@@ -1,3 +1,6 @@
+$green: #37483e;
+$yellow: #d2bb5d;
+
 .titles{
     margin-top: 1%;
     margin-bottom: 3em;
@@ -219,7 +222,37 @@
 	background-image: -webkit-linear-gradient(#c8af4b, #889707);
 }
 
+html, body {
+  height: 100%;
+}
+
 .nostripes > span > span, .nostripes > span:after {
 	-webkit-animation: none;
 	background-image: none;
+}
+
+#main > .button, #main > #display-area {
+  float: left;
+  height: 100%;
+  background-color: lighten($green, 50%);
+}
+
+#main > #display-area {
+  width: 80%;
+}
+
+#main {
+  height: 100%;
+}
+
+body #main > .button {
+  align-items: center;
+  background-color: $green;
+  color: lighten(saturate($yellow, 20%), 5%);
+  cursor: pointer;
+  display: flex;
+  font-size: 100px;
+  justify-content: center;
+  text-decoration: none;
+  width: 10%;
 }
