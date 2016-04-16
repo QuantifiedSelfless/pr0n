@@ -1,11 +1,15 @@
 /*eslint no-console: "off"*/
 
-let $    = require('jquery'),
-    data = require('./data/data');
+let $       = require('jquery'),
+    data    = require('./data/data'),
+    helpers = require('./helpers/helpers');
+
+helpers.initSocket();
 
 $(function() {
   let processing = false;
   let count = 0;
+
   let $main = $('#main');
   let $imageArea = $main.find('#image-area');
 
