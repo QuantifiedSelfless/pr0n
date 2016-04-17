@@ -32,8 +32,8 @@ module.exports = {
     }
   },
 
-  getFbImageURL: function(id) {
-    return `${fbImageUrl}/${id}/picture?type=square&height=180`;
+  getFbImageURL: function(fbid) {
+    return `${fbImageUrl}/${fbid}/picture?type=square&height=180`;
   },
 
   getDisplayAreaEndHTML: function(data) {
@@ -45,5 +45,5 @@ module.exports = {
   },
 
   endHTMLTemplate:
-`<div id="friends-container"><% _.forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.id %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
+`<div id="friends-container"><% _.forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.fbid %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
 };

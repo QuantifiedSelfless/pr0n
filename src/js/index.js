@@ -8,11 +8,12 @@ let $       = require('jquery'),
 helpers.initSocket();
 
 $(function() {
-  let processing = false;
-  let count = 0;
-
-  let $main = $('#main');
-  let $imageArea = $main.find('#image-area');
+  let $main               = $('#main'),
+      $displayArea        = $main.find('#display-area'),
+      $imageArea          = $main.find('#image-area'),
+      $imageAreaContainer = $main.find('#image-area-container'),
+      processing          = false,
+      count               = 0;
 
   let getSample = function getSample() {
     processing = true;
@@ -36,7 +37,7 @@ $(function() {
 
   getSample();
 
-  $('#main').on('click', '.button', function() {
+  $main.on('click', '.button', function() {
     if (processing) return null;
     processing = true;
 
@@ -50,7 +51,7 @@ $(function() {
 
     promise.then(function() {
       count += 1;
-      return count >= 5 ? endPage() : getSample();
+      return (count > 5 && (count % 5 === 0)) ? loadDecisionModal() : getSample();
     }, function(err) {
       alert('There\'s been an error on preference GET.');
       console.log(err);
@@ -63,7 +64,6 @@ $(function() {
     let promise = $.get(url);
     promise.then(data => {
       let list = _.filter(data.data, friend => friend.score > 0);
-      let $displayArea = $main.find('#display-area');
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
       _.defer(() => $main.addClass('finished'));
@@ -72,5 +72,33 @@ $(function() {
       console.log(err);
       processing = false;
     });
+  };
+
+  let loadDecisionModal = function() {
+    $imageArea.remove();
+    $imageAreaContainer.html(
+`<div id="maybe-continue">
+<p>Want to see who you're most attracted to now? &#9654;</p>
+<h2>OR</h2>
+<p>Keep going and help us learn your desires better? &#9664;</p>
+</div>`
+    );
+    let leftEvent = () => {
+      $main.off('click', '#left-button', leftEvent);
+      $imageAreaContainer.empty();
+      $imageAreaContainer.append($imageArea = $('<img id="image-area">'));
+      getSample();
+      processing = false;
+      return null;
+    };
+    let rightEvent = () => {
+      $main.off('click', '#right-button', rightEvent);
+      $imageAreaContainer.empty();
+      $imageAreaContainer.append($imageArea = $('<img id="image-area">'));
+      endPage();
+      return null;
+    };
+    $main.on('click', '#right-button', rightEvent);
+    $main.on('click', '#left-button', leftEvent);
   };
 });

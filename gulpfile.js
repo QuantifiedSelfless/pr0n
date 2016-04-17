@@ -19,6 +19,7 @@ gulp.task('browserify', function() {
     }).bundle()
         .pipe(source('index.js'))
         .pipe(gulp.dest('dist/js'));
+    console.log("FINISHED!!");
 });
 
 gulp.task('lint', function() {

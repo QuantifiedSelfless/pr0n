@@ -278,9 +278,14 @@ body #main > .button {
     padding: 30px;
     border: 1px solid white;
     box-sizing: border-box;
+    height: 366px;
   }
   .friend-image {
-    height: 180px;
+    display: block;
+    max-height: 180px;
+    max-width: 180px;
+    width: auto;
+    height: auto;
   }
   .friend-name {
     color: white;
@@ -302,6 +307,11 @@ body #main > .button {
       display: block;
       max-height: 100%;
       margin: 0 auto;
+    }
+  }
+  #maybe-continue {
+    p, h2 {
+      text-align: center;
     }
   }
 }
