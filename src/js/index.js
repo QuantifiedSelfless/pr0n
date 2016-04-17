@@ -1,6 +1,7 @@
 /*eslint no-console: "off"*/
 
 let $       = require('jquery'),
+    _       = require('lodash'),
     data    = require('./data/data'),
     helpers = require('./helpers/helpers');
 
@@ -22,6 +23,7 @@ $(function() {
       data => {
         $imageArea.attr('src', data.data.url);
         $imageArea.attr('data-id', data.data.id);
+        if (!(data.data && data.data.url)) return endPage();
         processing = false;
       },
       err => {
@@ -60,12 +62,11 @@ $(function() {
     let url = `${data.api.root}/results?userid=${data.userid}`;
     let promise = $.get(url);
     promise.then(data => {
-      let list = data.data.sort((a,b) => a.score - b.score);
+      let list = _.filter(data.data, friend => friend.score > 0);
       let $displayArea = $main.find('#display-area');
       $imageArea.remove();
-      list.forEach(elt => {
-        $displayArea.append($('<div>').text(`${elt.name}: ${elt.score}`));
-      });
+      $displayArea.html(helpers.getDisplayAreaEndHTML(list));
+      _.defer(() => $main.addClass('finished'));
     }, err => {
       alert('There\'s been an error on results GET.');
       console.log(err);

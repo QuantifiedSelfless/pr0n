@@ -1,5 +1,6 @@
 $green: #37483e;
 $yellow: #d2bb5d;
+$lightyellow: lighten(saturate($yellow, 20%), 5%);
 
 .titles{
     margin-top: 1%;
@@ -248,11 +249,66 @@ html, body {
 body #main > .button {
   align-items: center;
   background-color: $green;
-  color: lighten(saturate($yellow, 20%), 5%);
+  color: $lightyellow;
   cursor: pointer;
   display: flex;
   font-size: 100px;
   justify-content: center;
   text-decoration: none;
   width: 10%;
+}
+
+#display-area {
+  padding: 30px;
+  box-sizing: border-box;
+  transition: all 2s;
+  #friends-container {
+    transition: all 2s;
+    opacity: 0;
+  }
+  #main.finished & {
+    background: black;
+  }
+  #main.finished & #friends-container {
+    opacity: 1;
+  }
+  .friend-container {
+    width: 25%;
+    display: inline-block;
+    padding: 30px;
+    border: 1px solid white;
+    box-sizing: border-box;
+  }
+  .friend-image {
+    height: 180px;
+  }
+  .friend-name {
+    color: white;
+    font-size: 16px;
+    margin: 0 0 15px;
+    text-shadow: 0 0 2px $lightyellow;
+  }
+  #image-area {
+    max-height: 100%;
+    display: block;
+    margin: 0 auto;
+  }
+  #image-area-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    #image-area {
+      display: block;
+      max-height: 100%;
+      margin: 0 auto;
+    }
+  }
+}
+
+#main.finished {
+  .button {
+    font-size: 0;
+    background: black;
+  }
 }

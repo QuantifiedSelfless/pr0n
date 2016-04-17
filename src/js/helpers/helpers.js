@@ -1,6 +1,7 @@
 let { api, fbImageUrl } = require('../data/data');
 let socketio            = require('socket.io-client');
 let $                   = require('jquery');
+let _                   = require('lodash');
 let socketInited        = false;
 
 const QSEvents = {
@@ -15,7 +16,7 @@ module.exports = {
    * @return {Boolean} If environment is production.
    */
   isProduction: function() {
-    return true;
+    return false;
   },
 
   initSocket: function() {
@@ -31,8 +32,18 @@ module.exports = {
     }
   },
 
-  getFbImageTagFromID: function(id) {
-    let url = `${fbImageUrl}/${id}/picture?type=square&height=300`;
-    return $('<img>').attr('src', url);
-  }
+  getFbImageURL: function(id) {
+    return `${fbImageUrl}/${id}/picture?type=square&height=180`;
+  },
+
+  getDisplayAreaEndHTML: function(data) {
+    let compiled = _.template(this.endHTMLTemplate);
+    return compiled({
+      data: data,
+      getFbImageURL: this.getFbImageURL
+    });
+  },
+
+  endHTMLTemplate:
+`<div id="friends-container"><% _.forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.id %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
 };
