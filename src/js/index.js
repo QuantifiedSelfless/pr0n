@@ -88,7 +88,6 @@ $(function() {
       $imageAreaContainer.empty();
       $imageAreaContainer.append($imageArea = $('<img id="image-area">'));
       getSample();
-      processing = false;
       return null;
     };
     let rightEvent = () => {
