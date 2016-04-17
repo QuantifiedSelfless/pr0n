@@ -63,7 +63,7 @@ $(function() {
     let url = `${data.api.root}/results?userid=${data.userid}`;
     let promise = $.get(url);
     promise.then(data => {
-      let list = _.filter(data.data, friend => friend.score > 0);
+      let list = _.filter(data.data, friend => friend.score > 0).slice(0, 8);
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
       _.defer(() => $main.addClass('finished'));

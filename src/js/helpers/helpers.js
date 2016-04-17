@@ -5,15 +5,15 @@ let _                   = require('lodash');
 let socketInited        = false;
 
 const QSEvents = {
-  leftClick:  'leftclick',
-  rightClick: 'rightclick'
+  leftClick:  'button1',
+  rightClick: 'button2'
 };
 
 module.exports = {
 
   /**
    * Stub for checking environment.
-   * @return {Boolean} If environment is production.
+   * @return {Boolean} bool If environment is production.
    */
   isProduction: function() {
     return false;

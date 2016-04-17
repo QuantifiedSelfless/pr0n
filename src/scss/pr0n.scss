@@ -277,13 +277,17 @@ body #main > .button {
     display: inline-block;
     padding: 30px;
     border: 1px solid white;
+    border-left: 0;
+    &:nth-child(4n + 1) {
+      border-left: 1px solid white;
+    }
     box-sizing: border-box;
     height: 366px;
   }
   .friend-image {
     display: block;
     max-height: 180px;
-    max-width: 180px;
+    max-width: 100%;
     width: auto;
     height: auto;
   }
@@ -292,11 +296,6 @@ body #main > .button {
     font-size: 16px;
     margin: 0 0 15px;
     text-shadow: 0 0 2px $lightyellow;
-  }
-  #image-area {
-    max-height: 100%;
-    display: block;
-    margin: 0 auto;
   }
   #image-area-container {
     display: flex;
