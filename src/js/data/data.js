@@ -4,7 +4,7 @@
 let api = {
   host: 'http://iamadatapoint.com:6060',
   path: '/pr0n_processor',
-  socket: 'http://quantifiedselfbackend.local'
+  socket: 'http://localhost:3000'
 };
 api.root = api.host + api.path;
 
