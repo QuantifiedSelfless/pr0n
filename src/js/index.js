@@ -17,7 +17,7 @@ $(function() {
 
   let getSample = function getSample() {
     processing = true;
-    let url = `${data.api.root}/sample?userid=${data.userid}`;
+    let url = `${data.api.root}/sample?rfid=${data.rfid}`;
     let promise = $.get(url);
 
     promise.then(
@@ -44,7 +44,7 @@ $(function() {
     let pref = $(this).attr('data-value');
     let id = $imageArea.attr('data-id');
     let url = `${data.api.root}/preference?`+
-                `userid=${data.userid}&`+ 
+                `rfid=${data.rfid}&`+ 
                 `id=${id}&`+ 
                 `preference=${pref}`;
     let promise = $.get(url);
@@ -60,7 +60,7 @@ $(function() {
   });
 
   let endPage = function() {
-    let url = `${data.api.root}/results?userid=${data.userid}`;
+    let url = `${data.api.root}/results?rfid=${data.rfid}`;
     let promise = $.get(url);
     promise.then(data => {
       let list = _.filter(data.data, friend => friend.score > 0).slice(0, 8);

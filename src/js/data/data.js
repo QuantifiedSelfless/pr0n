@@ -11,7 +11,7 @@ api.root = api.host + api.path;
 
 module.exports = {
   api: api,
-  userid: require('query-string').parse(location.search).rfid,
+  rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
   login: 'localhost:8000'
 };
