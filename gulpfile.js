@@ -5,10 +5,19 @@ var babelify   = require('babelify'),
     browserify = require('browserify'),
     eslint     = require('gulp-eslint'),
     gulp       = require('gulp'),
-    reactify   = require('reactify'),
+    notify     = require('gulp-notify'),
     sass       = require('gulp-sass'),
     server     = require('./gulp/server'),
     source     = require('vinyl-source-stream');
+
+function handleErrors() {
+  var args = Array.prototype.slice.call(arguments);
+  notify.onError({
+    title: "Compile Error",
+    message: "<%= error.message %>"
+  }).apply(this, args);
+  this.emit('end'); // Keep gulp from hanging on this task
+}
 
 gulp.task('browserify', function() {
     browserify('./src/js/index.js', {
@@ -17,9 +26,10 @@ gulp.task('browserify', function() {
             global: true
         }]]
     }).bundle()
+        .on('error', handleErrors)
         .pipe(source('index.js'))
-        .pipe(gulp.dest('dist/js'));
-    console.log("FINISHED!!");
+        .pipe(gulp.dest('dist/js'))
+        .pipe(notify("JS compiling finished!"));
 });
 
 gulp.task('lint', function() {

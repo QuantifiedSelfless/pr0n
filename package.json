@@ -30,6 +30,7 @@
     "flux": "^2.1.1",
     "gulp": "^3.9.1",
     "gulp-eslint": "^2.0.0",
+    "gulp-notify": "^2.2.0",
     "gulp-sass": "^2.2.0",
     "install": "^0.6.1",
     "jquery": "^2.2.2",
@@ -38,7 +39,6 @@
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-router-component": "^0.31.4",
-    "reactify": "^1.1.1",
     "socket.io-client": "^1.4.5",
     "static-server": "^2.0.2",
     "vinyl-source-stream": "^1.1.0"
