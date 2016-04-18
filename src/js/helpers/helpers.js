@@ -6,7 +6,8 @@ let socketInited        = false;
 
 const QSEvents = {
   leftClick:  'button1',
-  rightClick: 'button2'
+  rightClick: 'button2',
+  RFID: 'rfid'
 };
 
 module.exports = {
