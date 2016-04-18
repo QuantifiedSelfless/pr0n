@@ -1,8 +1,8 @@
 let { api, fbImageUrl, login } = require('../data/data');
-let socketio            = require('socket.io-client');
-let $                   = require('jquery');
-let _                   = require('lodash');
-let socketInited        = false;
+let socketio                   = require('socket.io-client');
+let $                          = require('jquery');
+let _                          = require('lodash');
+let socketInited               = false;
 
 const QSEvents = {
   leftClick:  'button1',
