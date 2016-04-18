@@ -36,6 +36,7 @@
     "jquery": "^2.2.2",
     "lodash": "^4.11.1",
     "npm": ">=3.8.6",
+    "query-string": "^4.1.0",
     "react": "^0.14.8",
     "react-dom": "^0.14.8",
     "react-router-component": "^0.31.4",
