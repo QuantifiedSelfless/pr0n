@@ -1,4 +1,4 @@
-let { api, fbImageUrl } = require('../data/data');
+let { api, fbImageUrl, login } = require('../data/data');
 let socketio            = require('socket.io-client');
 let $                   = require('jquery');
 let _                   = require('lodash');
@@ -23,11 +23,14 @@ module.exports = {
     if (socketInited) return null;
     if (this.isProduction()) {
       let socket = socketio(api.socket);
-      socket.on(QSEvents.leftClick, function() {
+      socket.on(QSEvents.leftClick, () => {
         $('#left-button').click();
       });
-      socket.on(QSEvents.rightClick, function() {
+      socket.on(QSEvents.rightClick, () => {
         $('#right-button').click();
+      });
+      socket.on(QSEvents.RFID, () => {
+        window.location = login;
       });
     }
   },
