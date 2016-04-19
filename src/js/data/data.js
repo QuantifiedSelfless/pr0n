@@ -13,5 +13,5 @@ module.exports = {
   api: api,
   rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
-  login: 'localhost:8000'
+  login: 'http://localhost:8000'
 };

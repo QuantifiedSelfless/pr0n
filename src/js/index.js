@@ -1,4 +1,5 @@
 /*eslint no-console: "off"*/
+const RESET_TIMEOUT = 20000;
 
 let $       = require('jquery'),
     filter  = require('lodash.filter'),
@@ -68,6 +69,7 @@ $(function() {
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
       defer(() => $main.addClass('finished'));
+      setTimeout(() => window.location = data.login, RESET_TIMEOUT);
     }, err => {
       alert('There\'s been an error on results GET.');
       console.log(err);
@@ -79,9 +81,9 @@ $(function() {
     $imageArea.remove();
     $imageAreaContainer.html(
 `<div id="maybe-continue">
-<p>Want to see who you're most attracted to now? &#9654;</p>
-<h2>OR</h2>
-<p>Keep going and help us learn your desires better? &#9664;</p>
+<p><span class="arrow">&#9654;</span> Compute your sexual appetite summary now</p>
+<h2>or</h2>
+<p><span class="arrow">&#9664;</span> Keep helping DesignCraft learn about your desires</p>
 </div>`
     );
     let leftEvent = () => {
