@@ -1,7 +1,8 @@
 /*eslint no-console: "off"*/
 
 let $       = require('jquery'),
-    _       = require('lodash'),
+    filter  = require('lodash.filter'),
+    defer   = require('lodash.defer'),
     data    = require('./data/data'),
     helpers = require('./helpers/helpers');
 
@@ -63,10 +64,10 @@ $(function() {
     let url = `${data.api.root}/results?rfid=${data.rfid}`;
     let promise = $.get(url);
     promise.then(data => {
-      let list = _.filter(data.data, friend => friend.score > 0).slice(0, 8);
+      let list = filter(data.data, friend => friend.score > 0).slice(0, 8);
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
-      _.defer(() => $main.addClass('finished'));
+      defer(() => $main.addClass('finished'));
     }, err => {
       alert('There\'s been an error on results GET.');
       console.log(err);

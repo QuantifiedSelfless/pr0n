@@ -1,7 +1,8 @@
 let { api, fbImageUrl, login } = require('../data/data');
 let socketio                   = require('socket.io-client');
 let $                          = require('jquery');
-let _                          = require('lodash');
+let template                   = require('lodash.template');
+let forEach                    = require('lodash._arrayeach');
 let socketInited               = false;
 
 const QSEvents = {
@@ -41,13 +42,14 @@ module.exports = {
   },
 
   getDisplayAreaEndHTML: function(data) {
-    let compiled = _.template(this.endHTMLTemplate);
+    let compiled = template(this.endHTMLTemplate);
     return compiled({
       data: data,
-      getFbImageURL: this.getFbImageURL
+      getFbImageURL: this.getFbImageURL,
+      forEach: forEach
     });
   },
 
   endHTMLTemplate:
-`<div id="friends-container"><% _.forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.fbid %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
+`<div id="friends-container"><% forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.fbid %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
 };
