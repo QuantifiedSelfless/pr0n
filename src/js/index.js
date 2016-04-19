@@ -81,9 +81,9 @@ $(function() {
     $imageArea.remove();
     $imageAreaContainer.html(
 `<div id="maybe-continue">
-<p><span class="arrow">&#9654;</span> Compute your sexual appetite summary now</p>
+<p>Compute your sexual appetite summary now<span id="right-continue-arrow" class="arrow">&#9654;</span></p>
 <h2>or</h2>
-<p><span class="arrow">&#9664;</span> Keep helping DesignCraft learn about your desires</p>
+<p><span id="left-continue-arrow" class="arrow">&#9664;</span>Keep helping DesignCraft learn about your desires</p>
 </div>`
     );
     let leftEvent = () => {
