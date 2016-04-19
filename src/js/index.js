@@ -84,18 +84,22 @@ $(function() {
 </div>`
     );
     let leftEvent = () => {
-      $main.off('click', '#left-button', leftEvent);
+      removeEvents();
       $imageAreaContainer.empty();
       $imageAreaContainer.append($imageArea = $('<img id="image-area">'));
       getSample();
       return null;
     };
     let rightEvent = () => {
-      $main.off('click', '#right-button', rightEvent);
+      removeEvents();
       $imageAreaContainer.empty();
       $imageAreaContainer.append($imageArea = $('<img id="image-area">'));
       endPage();
       return null;
+    };
+    let removeEvents = () => {
+      $main.off('click', '#right-button', rightEvent);
+      $main.off('click', '#left-button', leftEvent);
     };
     $main.on('click', '#right-button', rightEvent);
     $main.on('click', '#left-button', leftEvent);
