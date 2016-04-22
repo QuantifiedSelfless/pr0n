@@ -42,7 +42,7 @@ module.exports = {
 
   redirectToLogin: () => window.location = login,
 
-  fetchQSPayload: function handlePayload(url, cb) {
+  fetchQSPayload: function fetchQSPayload(url, cb) {
     let counter = 0;
     let tryUrl = () => {
       let promise = $.get({
