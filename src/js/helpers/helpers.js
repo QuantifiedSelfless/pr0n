@@ -4,12 +4,15 @@ let $                          = require('jquery');
 let template                   = require('lodash.template');
 let forEach                    = require('lodash._arrayeach');
 let socketInited               = false;
+let processing                 = false;
 
+const MAX_TRIES = 3;
 const QSEvents = {
   leftClick:  'button1',
   rightClick: 'button2',
   RFID: 'rfid'
 };
+const TIMEOUT = 1000;
 
 module.exports = {
 
@@ -37,6 +40,30 @@ module.exports = {
     }
   },
 
+  redirectToLogin: () => window.location = login,
+
+  fetchQSPayload: function handlePayload(url, cb) {
+    let counter = 0;
+    let tryUrl = () => {
+      let promise = $.get({
+        timeout: TIMEOUT,
+        url: url
+      });
+      promise.then(payload => {
+        counter = 0;
+        processing = false;
+        cb(payload);
+      }, err => {
+        if (counter >= MAX_TRIES) this.redirectToLogin();
+        counter += 1;
+        alert('There\'s been an error on preference GET.');
+        console.log(err);
+        setTimeout(tryUrl, Math.pow(2, counter) * 1000);
+      });
+    };
+    if (!processing) tryUrl();
+  },
+
   getFbImageURL: function(fbid) {
     return `${fbImageUrl}/${fbid}/picture?type=square&height=180`;
   },
@@ -51,5 +78,5 @@ module.exports = {
   },
 
   endHTMLTemplate:
-`<div id="friends-container"><% forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.fbid %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
+`<div id="friends-container"><% forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.fbid %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><img src="<%= friend.url %>" class="porn-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
 };

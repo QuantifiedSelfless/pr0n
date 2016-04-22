@@ -14,66 +14,40 @@ $(function() {
       $displayArea        = $main.find('#display-area'),
       $imageArea          = $main.find('#image-area'),
       $imageAreaContainer = $main.find('#image-area-container'),
-      processing          = false,
       count               = 0;
 
   let getSample = function getSample() {
-    processing = true;
     let url = `${data.api.root}/sample?rfid=${data.rfid}`;
-    let promise = $.get(url);
-
-    promise.then(
-      data => {
-        $imageArea.attr('src', data.data.url);
-        $imageArea.attr('data-id', data.data.id);
-        if (!(data.data && data.data.url)) return endPage();
-        processing = false;
-      },
-      err => {
-        alert('There\'s been an error on sample GET.');
-        console.log(err);
-        processing = false;
-      }
-    );
+    helpers.fetchQSPayload(url, payload => {
+      $imageArea.attr('src', payload.data.url);
+      $imageArea.attr('data-id', payload.data.id);
+      if (!(payload.data && payload.data.url)) return endPage();
+    });
   };
 
   getSample();
 
   $main.on('click', '.button', function() {
-    if (processing) return null;
-    processing = true;
-
     let pref = $(this).attr('data-value');
     let id = $imageArea.attr('data-id');
     let url = `${data.api.root}/preference?`+
                 `rfid=${data.rfid}&`+ 
                 `id=${id}&`+ 
                 `preference=${pref}`;
-    let promise = $.get(url);
-
-    promise.then(function() {
+    helpers.fetchQSPayload(url, () => {
       count += 1;
       return (count > 5 && (count % 5 === 0)) ? loadDecisionModal() : getSample();
-    }, function(err) {
-      alert('There\'s been an error on preference GET.');
-      console.log(err);
-      processing = false;
     });
   });
 
   let endPage = function() {
     let url = `${data.api.root}/results?rfid=${data.rfid}`;
-    let promise = $.get(url);
-    promise.then(data => {
-      let list = filter(data.data, friend => friend.score > 0).slice(0, 8);
+    helpers.fetchQSPayload(url, payload => {
+      let list = filter(payload.data, friend => friend.score > 0).slice(0, 8);
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
       defer(() => $main.addClass('finished'));
-      setTimeout(() => window.location = data.login, RESET_TIMEOUT);
-    }, err => {
-      alert('There\'s been an error on results GET.');
-      console.log(err);
-      processing = false;
+      setTimeout(() => helpers.redirectToLogin, RESET_TIMEOUT);
     });
   };
 

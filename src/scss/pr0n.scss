@@ -261,7 +261,7 @@ body #main > .button {
 #display-area {
   padding: 30px;
   box-sizing: border-box;
-  transition: all 2s;
+  transition: background 2s;
   #friends-container {
     transition: all 2s;
     opacity: 0;
@@ -285,12 +285,19 @@ body #main > .button {
     box-sizing: border-box;
     height: 366px;
   }
-  .friend-image {
+  .friend-image, .porn-image {
     display: block;
     max-height: 180px;
-    max-width: 100%;
+    max-width: 50%;
+    box-sizing: border-box;
     width: auto;
     height: auto;
+  }
+  .friend-image {
+    padding-right: 2.5%;
+  }
+  .porn-image {
+    padding-left: 2.5%;
   }
   .friend-name {
     color: white;
@@ -338,7 +345,9 @@ body #main > .button {
 
 #main.finished {
   .button {
-    font-size: 0;
-    background: black;
+    display: none;
+  }
+  #display-area {
+    width: 100%;
   }
 }
