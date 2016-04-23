@@ -56,7 +56,6 @@ module.exports = {
       }, err => {
         if (counter >= MAX_TRIES) this.redirectToLogin();
         counter += 1;
-        alert('There\'s been an error on preference GET.');
         console.log(err);
         setTimeout(tryUrl, Math.pow(2, counter) * 1000);
       });
