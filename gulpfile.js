@@ -11,6 +11,8 @@ var babelify   = require('babelify'),
     source     = require('vinyl-source-stream')
     exec       = require('child_process').exec;
 
+process.env.NODE_ENV = process.env.NODE_ENV || "production";
+
 function handleErrors() {
   var args = Array.prototype.slice.call(arguments);
   notify.onError({
