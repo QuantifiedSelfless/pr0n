@@ -15212,7 +15212,7 @@ $(function () {
         return $main.addClass('finished');
       });
       setTimeout(function () {
-        return helpers.redirectToLogin;
+        return helpers.redirectToLogin();
       }, RESET_TIMEOUT);
     });
   };

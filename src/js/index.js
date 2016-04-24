@@ -47,7 +47,7 @@ $(function() {
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
       defer(() => $main.addClass('finished'));
-      setTimeout(() => helpers.redirectToLogin, RESET_TIMEOUT);
+      setTimeout(() => helpers.redirectToLogin(), RESET_TIMEOUT);
     });
   };
 
