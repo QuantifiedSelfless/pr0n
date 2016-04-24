@@ -235,7 +235,7 @@ body #main > .button {
   #display-area h2.end-heading {
     font-size: 30px;
     margin-bottom: 30px;
-    text-align: center; }
+    text-align: left; }
   #display-area div.friend-image {
     display: block;
     height: 250px;
