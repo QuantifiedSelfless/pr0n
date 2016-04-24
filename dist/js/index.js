@@ -15097,7 +15097,7 @@ module.exports = {
    * @return {Boolean} bool If environment is production.
    */
   isProduction: function isProduction() {
-    return false;
+    return true;
   },
 
   initSocket: function initSocket() {
