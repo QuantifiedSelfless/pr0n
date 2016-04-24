@@ -1,3 +1,4 @@
+/*global process*/
 /**
  * Various data for QuantifiedSelf pr0n exhibit
  */
@@ -14,5 +15,5 @@ module.exports = {
   rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
   login: 'http://localhost:8000',
-  env: process.env.NODE_ENV
+  env: process.env.NODE_ENV.toLowerCase()
 };

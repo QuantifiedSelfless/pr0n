@@ -1,4 +1,4 @@
-/*eslint no-unused-vars: ["warn", { "varsIgnorePattern": "reactify" }]*/
+/*global process*/
 /*eslint no-console: "off"*/
 
 var babelify   = require('babelify'),
@@ -8,7 +8,7 @@ var babelify   = require('babelify'),
     gulp       = require('gulp'),
     notify     = require('gulp-notify'),
     sass       = require('gulp-sass'),
-    source     = require('vinyl-source-stream')
+    source     = require('vinyl-source-stream'),
     exec       = require('child_process').exec;
 
 process.env.NODE_ENV = process.env.NODE_ENV || "production";

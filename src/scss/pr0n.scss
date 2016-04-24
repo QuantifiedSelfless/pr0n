@@ -1,3 +1,4 @@
+$gray: rgba(17, 20, 20, 0.82);
 $green: #37483e;
 $yellow: #d2bb5d;
 $lightyellow: lighten(saturate($yellow, 20%), 5%);
@@ -262,42 +263,59 @@ body #main > .button {
   padding: 30px;
   box-sizing: border-box;
   transition: background 2s;
-  #friends-container {
+  #matches-container {
     transition: all 2s;
     opacity: 0;
   }
   #main.finished & {
     background: black;
   }
-  #main.finished & #friends-container {
+  #main.finished & #matches-container {
     opacity: 1;
   }
-  .friend-container {
+  .match-container {
     width: 25%;
     display: block;
     float: left;
     padding: 30px;
     border: 1px solid white;
+    background: $gray;
     border-left: 0;
     &:nth-child(4n + 1) {
       border-left: 1px solid white;
     }
     box-sizing: border-box;
-    height: 366px;
   }
-  .friend-image, .porn-image {
-    display: block;
-    max-height: 180px;
-    max-width: 50%;
+  .friend-container, .porn-image {
     box-sizing: border-box;
-    width: auto;
+    display: block;
+    float: left;
     height: auto;
+    width: 50%;
   }
-  .friend-image {
-    padding-right: 2.5%;
+  .friend-container {
+    padding-right: 15px;
   }
-  .porn-image {
-    padding-left: 2.5%;
+  h2.end-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  img.porn-image {
+    padding-left: 15px;
+  }
+  img.friend-image {
+    display: block;
+    height: auto;
+    width: 100%;
+  }
+  img.porn-image {
+    display: block;
+    float: left;
+    width: auto;
+    max-width: 50%;
+    height: 250px;
+    margin-top: 40px;
   }
   .friend-name {
     color: white;

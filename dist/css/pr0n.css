@@ -206,35 +206,49 @@ body #main > .button {
   padding: 30px;
   box-sizing: border-box;
   transition: background 2s; }
-  #display-area #friends-container {
+  #display-area #matches-container {
     transition: all 2s;
     opacity: 0; }
   #main.finished #display-area {
     background: black; }
-  #main.finished #display-area #friends-container {
+  #main.finished #display-area #matches-container {
     opacity: 1; }
-  #display-area .friend-container {
+  #display-area .match-container {
     width: 25%;
     display: block;
     float: left;
     padding: 30px;
     border: 1px solid white;
+    background: rgba(17, 20, 20, 0.82);
     border-left: 0;
-    box-sizing: border-box;
-    height: 366px; }
-    #display-area .friend-container:nth-child(4n + 1) {
+    box-sizing: border-box; }
+    #display-area .match-container:nth-child(4n + 1) {
       border-left: 1px solid white; }
-  #display-area .friend-image, #display-area .porn-image {
-    display: block;
-    max-height: 180px;
-    max-width: 50%;
+  #display-area .friend-container, #display-area .porn-image {
     box-sizing: border-box;
+    display: block;
+    float: left;
+    height: auto;
+    width: 50%; }
+  #display-area .friend-container {
+    padding-right: 15px; }
+  #display-area h2.end-heading {
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center; }
+  #display-area img.porn-image {
+    padding-left: 15px; }
+  #display-area img.friend-image {
+    display: block;
+    height: auto;
+    width: 100%; }
+  #display-area img.porn-image {
+    display: block;
+    float: left;
     width: auto;
-    height: auto; }
-  #display-area .friend-image {
-    padding-right: 2.5%; }
-  #display-area .porn-image {
-    padding-left: 2.5%; }
+    max-width: 50%;
+    height: 250px;
+    margin-top: 40px; }
   #display-area .friend-name {
     color: white;
     font-size: 16px;

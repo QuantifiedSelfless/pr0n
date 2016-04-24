@@ -1,10 +1,11 @@
-let { api, fbImageUrl, login } = require('../data/data');
-let socketio                   = require('socket.io-client');
-let $                          = require('jquery');
-let template                   = require('lodash.template');
-let forEach                    = require('lodash._arrayeach');
-let socketInited               = false;
-let processing                 = false;
+/*eslint no-console: "off"*/ 
+let { api, fbImageUrl, login, env } = require('../data/data');
+let $                               = require('jquery');
+let forEach                         = require('lodash._arrayeach');
+let socketio                        = require('socket.io-client');
+let template                        = require('lodash.template');
+let socketInited                    = false;
+let processing                      = false;
 
 const MAX_TRIES = 3;
 const QSEvents = {
@@ -21,7 +22,7 @@ module.exports = {
    * @return {Boolean} bool If environment is production.
    */
   isProduction: function() {
-    return true;
+    return env === 'production';
   },
 
   initSocket: function() {
@@ -77,5 +78,5 @@ module.exports = {
   },
 
   endHTMLTemplate:
-`<div id="friends-container"><% forEach(data, function(friend) { %><div class="friend-container" data-id="<%= friend.fbid %>"><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img><img src="<%= friend.url %>" class="porn-image"></img><h2 class="friend-name"><%= friend.name %></h2></div><% }); %></div>`
+`<h2 class="end-heading">Based on your preferences, DesignCraft Algorithms recommends the following from your friends network to ignite your lusts!</h2><div id="matches-container"><% forEach(data, function(friend) { %><div class="match-container" data-id="<%= friend.fbid %>"><div class="friend-container"><p class="friend-name"><%= friend.name %></p><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img></div><img src="<%= friend.url %>" class="porn-image"></img></div><% }); %></div>`
 };

@@ -1,10 +1,10 @@
 /*eslint no-console: "off"*/
-const RESET_TIMEOUT = 20000;
+const RESET_TIMEOUT = 20000000;
 
 let $       = require('jquery'),
-    filter  = require('lodash.filter'),
-    defer   = require('lodash.defer'),
     data    = require('./data/data'),
+    defer   = require('lodash.defer'),
+    filter  = require('lodash.filter'),
     helpers = require('./helpers/helpers');
 
 helpers.initSocket();
