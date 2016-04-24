@@ -274,48 +274,53 @@ body #main > .button {
     opacity: 1;
   }
   .match-container {
-    width: 25%;
-    display: block;
-    float: left;
-    padding: 30px;
-    border: 1px solid white;
     background: $gray;
     border-left: 0;
+    border: 1px solid white;
+    display: block;
+    float: left;
+    height: 400px;
+    padding: 30px;
+    width: 25%;
     &:nth-child(4n + 1) {
       border-left: 1px solid white;
     }
     box-sizing: border-box;
   }
-  .friend-container, .porn-image {
+  .friend-container {
+    padding-right: 15px;
     box-sizing: border-box;
     display: block;
     float: left;
     height: auto;
     width: 50%;
   }
-  .friend-container {
-    padding-right: 15px;
-  }
   h2.end-heading {
     font-size: 30px;
     margin-bottom: 30px;
     text-align: center;
   }
-  img.porn-image {
-    padding-left: 15px;
-  }
-  img.friend-image {
+  div.friend-image {
     display: block;
-    height: auto;
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: contain;
     width: 100%;
   }
-  img.porn-image {
+  div.porn-image-container {
+    box-sizing: border-box;
     display: block;
     float: left;
-    width: auto;
-    max-width: 50%;
     height: 250px;
     margin-top: 40px;
+    padding-left: 15px;
+    width: 50%;
+    .porn-image {
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
   }
   .friend-name {
     color: white;

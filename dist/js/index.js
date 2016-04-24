@@ -15155,14 +15155,14 @@ module.exports = {
     });
   },
 
-  endHTMLTemplate: '<h2 class="end-heading">Based on your preferences, DesignCraft Algorithms recommends the following from your friends network to ignite your lusts!</h2><div id="matches-container"><% forEach(data, function(friend) { %><div class="match-container" data-id="<%= friend.fbid %>"><div class="friend-container"><p class="friend-name"><%= friend.name %></p><img src="<%= getFbImageURL(friend.fbid) %>" class="friend-image"></img></div><img src="<%= friend.url %>" class="porn-image"></img></div><% }); %></div>'
+  endHTMLTemplate: '<h2 class="end-heading">Based on your preferences, DesignCraft Algorithms recommends the following from your friends network to ignite your lusts!</h2><div id="matches-container"><% forEach(data, function(friend) { %><div class="match-container" data-id="<%= friend.fbid %>"><div class="friend-container"><p class="friend-name"><%= friend.name %></p><div style="background-image: url(<%= getFbImageURL(friend.fbid) %>);" class="friend-image"></div></div><div class="porn-image-container"><div style="background-image: url(<%= friend.url %>);" class="porn-image"></div></div></div><% }); %></div>'
 };
 
 },{"../data/data":66,"jquery":30,"lodash._arrayeach":32,"lodash.template":43,"socket.io-client":53}],68:[function(require,module,exports){
 'use strict';
 
 /*eslint no-console: "off"*/
-var RESET_TIMEOUT = 20000000;
+var RESET_TIMEOUT = 20000;
 
 var $ = require('jquery'),
     data = require('./data/data'),
