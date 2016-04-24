@@ -59,5 +59,5 @@ gulp.task('server', function() {
 });
 
 gulp.task('default', ['lint', 'build', 'server'], function() {
-    return gulp.watch('src/**/*.*', ['lint', 'browserify', 'copy']);
+    return gulp.watch('src/**/*.*', ['lint', 'build', 'copy']);
 });
