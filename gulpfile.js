@@ -3,12 +3,13 @@
 
 var babelify   = require('babelify'),
     browserify = require('browserify'),
+    envify     = require('envify'),
     eslint     = require('gulp-eslint'),
     gulp       = require('gulp'),
     notify     = require('gulp-notify'),
     sass       = require('gulp-sass'),
-    server     = require('./gulp/server'),
-    source     = require('vinyl-source-stream');
+    source     = require('vinyl-source-stream')
+    exec       = require('child_process').exec;
 
 function handleErrors() {
   var args = Array.prototype.slice.call(arguments);
@@ -19,9 +20,9 @@ function handleErrors() {
   this.emit('end'); // Keep gulp from hanging on this task
 }
 
-gulp.task('browserify', function() {
+gulp.task('build', ['copy'], function() {
     browserify('./src/js/index.js', {
-        transform: [[babelify, {
+        transform: [[envify, {}], [babelify, {
             presets: ["es2015"],
             global: true
         }]]
@@ -51,11 +52,12 @@ gulp.task('copy', function() {
 });
 
 gulp.task('server', function() {
-    server.start(function() {
-        console.log('Server listening to', server.port);
-    });
+  console.log("Starting server! Good luck everyone!");
+  exec('./run.sh', function() {
+    console.log("Server stopped :(");
+  });
 });
 
-gulp.task('default', ['lint', 'browserify', 'copy', 'server'], function() {
+gulp.task('default', ['lint', 'build', 'server'], function() {
     return gulp.watch('src/**/*.*', ['lint', 'browserify', 'copy']);
 });
