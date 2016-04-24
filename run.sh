@@ -8,4 +8,5 @@ if [[ -z $pid ]]
       kill -9 $pid
 fi
 
-gulp
+cd dist
+python3 -m http.server $port
