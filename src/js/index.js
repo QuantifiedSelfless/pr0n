@@ -1,5 +1,5 @@
 /*eslint no-console: "off"*/
-const RESET_TIMEOUT = 20000000;
+const RESET_TIMEOUT = 20000;
 
 let $       = require('jquery'),
     data    = require('./data/data'),
