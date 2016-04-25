@@ -17,7 +17,7 @@ module.exports = {
   login: 'http://localhost:8000',
   _env: $.ajax('/environment.json'),
   env: function(cb) {
-    _env.then(data => {
+    this._env.then(data => {
       data = JSON.parse(data);
       cb(data);
     });
