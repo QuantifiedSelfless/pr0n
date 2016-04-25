@@ -23,7 +23,6 @@ module.exports = {
    */
   isProduction: function(cb) {
     env(data => {
-      data = JSON.parse(data);
       if (data.env === 'production') {
         cb();
       }

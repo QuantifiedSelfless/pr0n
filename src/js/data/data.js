@@ -3,11 +3,12 @@
  */
 let $ = require('jquery');
 
-let api = {
-  host: 'http://quantifiedselfbackend.local:6060',
-  path: '/pr0n_processor',
-  socket: 'http://localhost:3000'
-};
+let _env = $.ajax('/environment.json'),
+     api = {
+       host: 'http://quantifiedselfbackend.local:6060',
+       path: '/pr0n_processor',
+       socket: 'http://localhost:3000'
+     };
 api.root = api.host + api.path;
 
 module.exports = {
@@ -17,7 +18,7 @@ module.exports = {
   login: 'http://localhost:8000',
   _env: $.ajax('/environment.json'),
   env: function(cb) {
-    this._env.then(data => {
+    _env.then(data => {
       data = JSON.parse(data);
       cb(data);
     });

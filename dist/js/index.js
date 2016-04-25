@@ -15047,7 +15047,8 @@ module.exports = yeast;
  */
 var $ = require('jquery');
 
-var api = {
+var _env = $.ajax('/environment.json'),
+    api = {
   host: 'http://quantifiedselfbackend.local:6060',
   path: '/pr0n_processor',
   socket: 'http://localhost:3000'
@@ -15059,7 +15060,13 @@ module.exports = {
   rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
   login: 'http://localhost:8000',
-  env: $.ajax('/environment.json')
+  _env: $.ajax('/environment.json'),
+  env: function env(cb) {
+    _env.then(function (data) {
+      data = JSON.parse(data);
+      cb(data);
+    });
+  }
 };
 
 },{"jquery":30,"query-string":52}],67:[function(require,module,exports){
@@ -15096,8 +15103,7 @@ module.exports = {
    * @return {Boolean} bool If environment is production.
    */
   isProduction: function isProduction(cb) {
-    env.then(function (data) {
-      data = JSON.parse(data);
+    env(function (data) {
       if (data.env === 'production') {
         cb();
       }
