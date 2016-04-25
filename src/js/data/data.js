@@ -16,7 +16,6 @@ module.exports = {
   rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
   login: 'http://localhost:8000',
-  _env: $.ajax('/environment.json'),
   env: function(cb) {
     _env.then(data => {
       data = JSON.parse(data);

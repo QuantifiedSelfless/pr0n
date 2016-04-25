@@ -81,12 +81,6 @@ module.exports = {
     });
   },
 
-  imagesLoaded: function($images, cb) {
-    Promise.all($images.map((i, elt) => {
-      return new Promise(res => $(elt).on('load', () => res()));
-    })).then(cb);
-  },
-
   endHTMLTemplate:
     `<h2 class="end-heading">Based on your preferences, DesignCraft Algorithms recommends the following from your friends network to ignite your lusts!</h2><div id="matches-container"><% forEach(data, function(friend) { %><div class="match-container" data-id="<%= friend.fbid %>"><div class="friend-container"><p class="friend-name"><%= friend.name %></p><div style="background-image: url(<%= getFbImageURL(friend.fbid) %>);" class="friend-image"></div></div><div class="porn-image-container"><div style="background-image: url(<%= friend.url %>);" class="porn-image"></div></div></div><% }); %></div>`
 };

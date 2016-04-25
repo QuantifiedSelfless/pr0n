@@ -15060,7 +15060,6 @@ module.exports = {
   rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
   login: 'http://localhost:8000',
-  _env: $.ajax('/environment.json'),
   env: function env(cb) {
     _env.then(function (data) {
       data = JSON.parse(data);
@@ -15164,16 +15163,6 @@ module.exports = {
       getFbImageURL: this.getFbImageURL,
       forEach: forEach
     });
-  },
-
-  imagesLoaded: function imagesLoaded($images, cb) {
-    Promise.all($images.map(function (i, elt) {
-      return new Promise(function (res) {
-        return $(elt).on('load', function () {
-          return res();
-        });
-      });
-    })).then(cb);
   },
 
   endHTMLTemplate: '<h2 class="end-heading">Based on your preferences, DesignCraft Algorithms recommends the following from your friends network to ignite your lusts!</h2><div id="matches-container"><% forEach(data, function(friend) { %><div class="match-container" data-id="<%= friend.fbid %>"><div class="friend-container"><p class="friend-name"><%= friend.name %></p><div style="background-image: url(<%= getFbImageURL(friend.fbid) %>);" class="friend-image"></div></div><div class="porn-image-container"><div style="background-image: url(<%= friend.url %>);" class="porn-image"></div></div></div><% }); %></div>'
