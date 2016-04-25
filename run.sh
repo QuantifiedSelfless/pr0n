@@ -8,5 +8,5 @@ if [[ -z $pid ]]
       kill -9 $pid
 fi
 
-cd dist
-python3 -m http.server $port
+npm install --production
+node server.js $port

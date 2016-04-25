@@ -1,7 +1,7 @@
-/*global process*/
 /**
  * Various data for QuantifiedSelf pr0n exhibit
  */
+let $ = require('jquery');
 
 let api = {
   host: 'http://quantifiedselfbackend.local:6060',
@@ -15,5 +15,11 @@ module.exports = {
   rfid: require('query-string').parse(location.search).rfid,
   fbImageUrl: 'http://graph.facebook.com',
   login: 'http://localhost:8000',
-  env: process.env.NODE_ENV.toLowerCase()
+  _env: $.ajax('/environment.json'),
+  env: function(cb) {
+    _env.then(data => {
+      data = JSON.parse(data);
+      cb(data);
+    });
+  }
 };

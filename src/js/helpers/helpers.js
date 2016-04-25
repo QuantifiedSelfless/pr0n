@@ -21,13 +21,18 @@ module.exports = {
    * Stub for checking environment.
    * @return {Boolean} bool If environment is production.
    */
-  isProduction: function() {
-    return env === 'production';
+  isProduction: function(cb) {
+    env(data => {
+      data = JSON.parse(data);
+      if (data.env === 'production') {
+        cb();
+      }
+    });
   },
 
   initSocket: function() {
     if (socketInited) return null;
-    if (this.isProduction()) {
+    this.isProduction(() => {
       let socket = socketio(api.socket);
       socket.on(QSEvents.leftClick, () => {
         $('#left-button').click();
@@ -38,7 +43,7 @@ module.exports = {
       socket.on(QSEvents.RFID, () => {
         window.location = login;
       });
-    }
+    });
   },
 
   redirectToLogin: () => window.location = login,
@@ -75,6 +80,12 @@ module.exports = {
       getFbImageURL: this.getFbImageURL,
       forEach: forEach
     });
+  },
+
+  imagesLoaded: function($images, cb) {
+    Promise.all($images.map((i, elt) => {
+      return new Promise(res => $(elt).on('load', () => res()));
+    })).then(cb);
   },
 
   endHTMLTemplate:

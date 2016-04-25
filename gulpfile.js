@@ -3,7 +3,6 @@
 
 var babelify   = require('babelify'),
     browserify = require('browserify'),
-    envify     = require('envify'),
     eslint     = require('gulp-eslint'),
     gulp       = require('gulp'),
     notify     = require('gulp-notify'),
@@ -24,7 +23,7 @@ function handleErrors() {
 
 gulp.task('build', ['copy'], function() {
     browserify('./src/js/index.js', {
-        transform: [[envify, {}], [babelify, {
+        transform: [[babelify, {
             presets: ["es2015"],
             global: true
         }]]
@@ -43,6 +42,8 @@ gulp.task('lint', function() {
 
 gulp.task('copy', function() {
     gulp.src('src/index.html')
+        .pipe(gulp.dest('dist'));
+    gulp.src('src/environment.json')
         .pipe(gulp.dest('dist'));
     gulp.src('src/scss/*.scss')
         .pipe(sass().on('error', sass.logError))
