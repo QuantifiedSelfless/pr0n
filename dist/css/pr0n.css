@@ -269,6 +269,12 @@ body #main > .button {
       display: block;
       max-height: 100%;
       margin: 0 auto; }
+    #display-area #image-area-container #image-area.left {
+      transform: translateX(-4000px);
+      transition: 0.6s transform; }
+    #display-area #image-area-container #image-area.right {
+      transform: translateX(4000px);
+      transition: 0.6s transform; }
   #display-area #maybe-continue p, #display-area #maybe-continue h2 {
     text-align: center; }
   #display-area #maybe-continue h2 {

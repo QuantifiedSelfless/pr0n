@@ -338,6 +338,14 @@ body #main > .button {
       max-height: 100%;
       margin: 0 auto;
     }
+    #image-area.left {
+      transform: translateX(-4000px);
+      transition: 0.6s transform;
+    }
+    #image-area.right {
+      transform: translateX(4000px);
+      transition: 0.6s transform;
+    }
   }
   #maybe-continue {
     p, h2 {

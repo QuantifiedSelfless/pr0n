@@ -15194,6 +15194,9 @@ $(function () {
     helpers.fetchQSPayload(url, function (payload) {
       $imageArea.attr('src', payload.data.url);
       $imageArea.attr('data-id', payload.data.id);
+      $imageArea.one('load', function () {
+        $(this).removeClass('left right');
+      });
       if (!(payload.data && payload.data.url)) return endPage();
     });
   };
@@ -15206,7 +15209,15 @@ $(function () {
     var url = data.api.root + '/preference?' + ('rfid=' + data.rfid + '&') + ('id=' + id + '&') + ('preference=' + pref);
     helpers.fetchQSPayload(url, function () {
       count += 1;
-      return count > 5 && count % 5 === 0 ? loadDecisionModal() : getSample();
+      return promise.then(function () {
+        count > 5 && count % 5 === 0 ? loadDecisionModal() : getSample();
+      });
+    });
+    $imageArea.addClass(pref == 1 ? 'right' : 'left');
+    var promise = new Promise(function (res) {
+      return $imageArea.one('transitionend', function () {
+        return res();
+      });
     });
   });
 

@@ -21,6 +21,9 @@ $(function() {
     helpers.fetchQSPayload(url, payload => {
       $imageArea.attr('src', payload.data.url);
       $imageArea.attr('data-id', payload.data.id);
+      $imageArea.one('load', function() {
+        $(this).removeClass('left right')
+      });
       if (!(payload.data && payload.data.url)) return endPage();
     });
   };
@@ -36,8 +39,14 @@ $(function() {
                 `preference=${pref}`;
     helpers.fetchQSPayload(url, () => {
       count += 1;
-      return (count > 5 && (count % 5 === 0)) ? loadDecisionModal() : getSample();
+      return promise.then(() => {
+        (count > 5 && (count % 5 === 0)) ? loadDecisionModal() : getSample();
+      });
     });
+    $imageArea.addClass(pref == 1 ? 'right' : 'left');
+    let promise = new Promise(res => 
+      $imageArea.one('transitionend', () => res())
+    )
   });
 
   let endPage = function() {
