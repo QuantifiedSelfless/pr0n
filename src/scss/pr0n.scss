@@ -342,11 +342,11 @@ body #main > .button {
       transform: translate3d(0,0,0);
     }
     #image-area.left {
-      transform: translateX(-6000px) translate3d(0,0,0);
+      transform: translate3d(0,0,0) translateX(-6000px);
       transition: 0.9s transform;
     }
     #image-area.right {
-      transform: translateX(6000px) translate3d(0,0,0);
+      transform: translate3d(0,0,0) translateX(6000px);
       transition: 0.9s transform;
     }
   }
