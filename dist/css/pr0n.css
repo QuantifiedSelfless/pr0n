@@ -206,7 +206,8 @@ body #main > .button {
 #display-area {
   padding: 30px;
   box-sizing: border-box;
-  transition: background 2s; }
+  transition: background 2s;
+  transform: translate3d(0, 0, 0); }
   #display-area #matches-container {
     transition: all 2s;
     opacity: 0; }
@@ -269,13 +270,14 @@ body #main > .button {
     #display-area #image-area-container #image-area {
       display: block;
       max-height: 100%;
-      margin: 0 auto; }
+      margin: 0 auto;
+      transform: translate3d(0, 0, 0); }
     #display-area #image-area-container #image-area.left {
-      transform: translateX(-4000px);
-      transition: 0.6s transform; }
+      transform: translateX(-6000px) translate3d(0, 0, 0);
+      transition: 0.9s transform; }
     #display-area #image-area-container #image-area.right {
-      transform: translateX(4000px);
-      transition: 0.6s transform; }
+      transform: translateX(6000px) translate3d(0, 0, 0);
+      transition: 0.9s transform; }
   #display-area #maybe-continue p, #display-area #maybe-continue h2 {
     text-align: center; }
   #display-area #maybe-continue h2 {

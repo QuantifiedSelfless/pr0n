@@ -264,6 +264,7 @@ body #main > .button {
   padding: 30px;
   box-sizing: border-box;
   transition: background 2s;
+  transform: translate3d(0,0,0);
   #matches-container {
     transition: all 2s;
     opacity: 0;
@@ -338,14 +339,15 @@ body #main > .button {
       display: block;
       max-height: 100%;
       margin: 0 auto;
+      transform: translate3d(0,0,0);
     }
     #image-area.left {
-      transform: translateX(-4000px);
-      transition: 0.6s transform;
+      transform: translateX(-6000px) translate3d(0,0,0);
+      transition: 0.9s transform;
     }
     #image-area.right {
-      transform: translateX(4000px);
-      transition: 0.6s transform;
+      transform: translateX(6000px) translate3d(0,0,0);
+      transition: 0.9s transform;
     }
   }
   #maybe-continue {
