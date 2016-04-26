@@ -1,0 +1,143 @@
+$	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/\$/;"	v	lineno:2
+<i>	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/1/;"	v	lineno:42	namespace:stage	type:number
+<i>	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/0/;"	v	lineno:15	namespace:stage	type:number
+AddToList	/home/moresilenter/code/pr0n/src/js/components/app-addtolist.js	/AddToList/;"	v	lineno:4
+AddToList	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/AddToList/;"	v	lineno:4
+AddToList	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/AddToList/;"	v	lineno:3
+App	/home/moresilenter/code/pr0n/src/js/components/app.js	/App/;"	v	lineno:13
+App	/home/moresilenter/code/pr0n/src/js/main.js	/App/;"	v	lineno:1
+App	/home/moresilenter/code/pr0n/src/js/main.js	/App/;"	v	lineno:1
+AppActions	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/AppActions/;"	v	lineno:3
+AppActions	/home/moresilenter/code/pr0n/src/js/components/app-addtolist.js	/AppActions/;"	v	lineno:2
+AppActions	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/AppActions/;"	v	lineno:3
+AppActions	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/AppActions/;"	v	lineno:5
+AppActions	/home/moresilenter/code/pr0n/src/js/components/app-removefromlist.js	/AppActions/;"	v	lineno:2
+AppDispatcher	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/AppDispatcher/;"	v	lineno:1
+AppDispatcher	/home/moresilenter/code/pr0n/src/js/dispatchers/app-dispatcher.js	/AppDispatcher/;"	v	lineno:4
+AppDispatcher	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/AppDispatcher/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/AppStore/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/AppStore/;"	v	lineno:3
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/AppStore/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-charquestions.js	/AppStore/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-compatibility.js	/AppStore/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-finalthoughts.js	/AppStore/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app-gametitles.js	/AppStore/;"	v	lineno:2
+AppStore	/home/moresilenter/code/pr0n/src/js/components/app.js	/AppStore/;"	v	lineno:5
+AppStore	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/AppStore/;"	v	lineno:194
+CharAnswers	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/CharAnswers/;"	v	lineno:6
+CharAnswers	/home/moresilenter/code/pr0n/src/js/components/app.js	/CharAnswers/;"	v	lineno:7
+CharCart	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/CharCart/;"	v	lineno:8
+CharCart	/home/moresilenter/code/pr0n/src/js/components/app.js	/CharCart/;"	v	lineno:4
+CharList	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/CharList/;"	v	lineno:6
+CharList	/home/moresilenter/code/pr0n/src/js/components/app.js	/CharList/;"	v	lineno:2
+CharQuestion	/home/moresilenter/code/pr0n/src/js/components/app-charquestions.js	/CharQuestion/;"	v	lineno:4
+CharQuestion	/home/moresilenter/code/pr0n/src/js/components/app.js	/CharQuestion/;"	v	lineno:6
+Compatibility	/home/moresilenter/code/pr0n/src/js/components/app-compatibility.js	/Compatibility/;"	v	lineno:4
+Compatibility	/home/moresilenter/code/pr0n/src/js/components/app.js	/Compatibility/;"	v	lineno:8
+Dispatcher	/home/moresilenter/code/pr0n/src/js/dispatchers/app-dispatcher.js	/Dispatcher/;"	v	lineno:1
+EventEmitter	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/EventEmitter/;"	v	lineno:4
+FinalThoughts	/home/moresilenter/code/pr0n/src/js/components/app-finalthoughts.js	/FinalThoughts/;"	v	lineno:4
+FinalThoughts	/home/moresilenter/code/pr0n/src/js/components/app.js	/FinalThoughts/;"	v	lineno:11
+FlipScreen	/home/moresilenter/code/pr0n/src/js/components/app-flipscreen.js	/FlipScreen/;"	v	lineno:3
+FlipScreen	/home/moresilenter/code/pr0n/src/js/components/app.js	/FlipScreen/;"	v	lineno:10
+GameTitles	/home/moresilenter/code/pr0n/src/js/components/app-gametitles.js	/GameTitles/;"	v	lineno:4
+GameTitles	/home/moresilenter/code/pr0n/src/js/components/app.js	/GameTitles/;"	v	lineno:3
+PlayerPick	/home/moresilenter/code/pr0n/src/js/components/app-playerpick.js	/PlayerPick/;"	v	lineno:3
+PlayerPick	/home/moresilenter/code/pr0n/src/js/components/app.js	/PlayerPick/;"	v	lineno:9
+Player_1	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/Player_1/;"	v	lineno:181	type:player
+Player_2	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/Player_2/;"	v	lineno:182	type:player
+React	/home/moresilenter/code/pr0n/src/js/components/app-addtolist.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-charquestions.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-compatibility.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-finalthoughts.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-flipscreen.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-gametitles.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-playerpick.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app-removefromlist.js	/React/;"	v	lineno:1
+React	/home/moresilenter/code/pr0n/src/js/components/app.js	/React/;"	v	lineno:1
+ReactDOM	/home/moresilenter/code/pr0n/src/js/main.js	/ReactDOM/;"	v	lineno:2
+ReactDOM	/home/moresilenter/code/pr0n/src/js/main.js	/ReactDOM/;"	v	lineno:2
+RemoveFromList	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/RemoveFromList/;"	v	lineno:4
+RemoveFromList	/home/moresilenter/code/pr0n/src/js/components/app-removefromlist.js	/RemoveFromList/;"	v	lineno:4
+active	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/active/;"	v	lineno:123	namespace:activePlayer.player	type:boolean
+active	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/active/;"	v	lineno:123	namespace:player	type:boolean
+activeList	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/activeList/;"	f	lineno:157	namespace:player.prototype	type:!this.traits function()
+activePlayer	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/activePlayer/;"	f	lineno:185	type:player function()
+activeStage	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/activeStage/;"	f	lineno:165	namespace:player.prototype	type:!this.stage function()
+addChar	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/addChar/;"	f	lineno:5	namespace:AppActions	type:void function(?)
+addStage	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/addStage/;"	f	lineno:168	namespace:player.prototype	type:void function()
+addToList	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/addToList/;"	f	lineno:128	namespace:player.prototype	type:void function(player.traits.<i>, Array[player.traits.<i>])
+answer_titles	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/answer_titles/;"	v	lineno:10	type:[answer_titles.<i>]
+answer_titles_flipped	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/answer_titles_flipped/;"	v	lineno:11	type:[answer_titles_flipped.<i>]
+assign	/home/moresilenter/code/pr0n/src/js/dispatchers/app-dispatcher.js	/assign/;"	v	lineno:2
+assign	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/assign/;"	v	lineno:3
+char_list	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/char_list/;"	v	lineno:9	type:[char_list.<i>]
+checked	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/checked/;"	v	lineno:7	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/className/;"	v	lineno:48	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/className/;"	v	lineno:20	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-charquestions.js	/className/;"	v	lineno:29	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-compatibility.js	/className/;"	v	lineno:11	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-finalthoughts.js	/className/;"	v	lineno:17	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-gametitles.js	/className/;"	v	lineno:13	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-playerpick.js	/className/;"	v	lineno:7	type:boolean
+className	/home/moresilenter/code/pr0n/src/js/components/app-removefromlist.js	/className/;"	v	lineno:11	type:string
+current_state	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/current_state/;"	v	lineno:6	type:number
+flipActive	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/flipActive/;"	f	lineno:148	namespace:player.prototype	type:void function()
+flipFromScreen	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/flipFromScreen/;"	f	lineno:25	namespace:AppActions	type:void function()
+flipToScreen	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/flipToScreen/;"	f	lineno:19	namespace:AppActions	type:void function()
+flipmessage	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/flipmessage/;"	v	lineno:15	type:[string]
+flipscreen	/home/moresilenter/code/pr0n/src/js/components/app.js	/flipscreen/;"	v	lineno:109	type:boolean
+i	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/i/;"	v	lineno:101	type:number
+i	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/i/;"	v	lineno:152	namespace:player.prototype.flipActive	type:number
+i	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/i/;"	v	lineno:173	namespace:player.prototype.sumList	type:number
+id	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/id/;"	v	lineno:121	namespace:activePlayer.player	type:string
+id	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/id/;"	v	lineno:121	namespace:player	type:string
+inactivePlayer	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/inactivePlayer/;"	f	lineno:189	type:player function()
+index	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/index/;"	v	lineno:12	namespace:AppActions.removeChar
+index	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/index/;"	v	lineno:54	type:boolean
+index	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/index/;"	v	lineno:141	namespace:player.prototype.removeFromList
+isActive	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/isActive/;"	f	lineno:145	namespace:player.prototype	type:!this.active function()
+item	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/item/;"	v	lineno:5	namespace:AppActions.addChar
+key	/home/moresilenter/code/pr0n/src/js/components/app-addtolist.js	/key/;"	v	lineno:14	type:boolean
+key	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/key/;"	v	lineno:35	type:boolean
+key	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/key/;"	v	lineno:52	type:boolean
+key	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/key/;"	v	lineno:15	type:boolean
+onClick	/home/moresilenter/code/pr0n/src/js/components/app-addtolist.js	/onClick/;"	v	lineno:14
+onClick	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/onClick/;"	v	lineno:67	type:boolean
+onClick	/home/moresilenter/code/pr0n/src/js/components/app-flipscreen.js	/onClick/;"	v	lineno:13	type:boolean
+onClick	/home/moresilenter/code/pr0n/src/js/components/app-removefromlist.js	/onClick/;"	v	lineno:11	type:boolean
+player	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/player/;"	f	lineno:119	type:void function(number, bool)
+player	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/player/;"	v	lineno:186	namespace:activePlayer	type:player
+player	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/player/;"	v	lineno:190	namespace:inactivePlayer	type:player
+prototype	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/class player \{/;"	v	lineno:119	namespace:player
+questions	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/questions/;"	v	lineno:125	namespace:activePlayer.player	type:[?]
+questions	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/questions/;"	v	lineno:125	namespace:player	type:[?]
+removeChar	/home/moresilenter/code/pr0n/src/js/actions/app-actions.js	/removeChar/;"	f	lineno:12	namespace:AppActions	type:void function(?)
+removeFromList	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/removeFromList/;"	f	lineno:141	namespace:player.prototype	type:void function(?, Array[player.traits.<i>])
+similar_char	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/similar_char/;"	v	lineno:12	type:[?]
+src	/home/moresilenter/code/pr0n/src/js/components/app-flipscreen.js	/src/;"	v	lineno:12	type:boolean
+src	/home/moresilenter/code/pr0n/src/js/components/app.js	/src/;"	v	lineno:108	type:boolean
+stage	/home/moresilenter/code/pr0n/src/js/components/app-charanswers.js	/stage/;"	v	lineno:35
+stage	/home/moresilenter/code/pr0n/src/js/components/app-charlist.js	/stage/;"	v	lineno:15
+stage	/home/moresilenter/code/pr0n/src/js/components/app.js	/stage/;"	v	lineno:109
+stage	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/stage/;"	v	lineno:122	namespace:activePlayer.player	type:number
+stage	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/stage/;"	v	lineno:122	namespace:player	type:number
+stuff	/home/moresilenter/code/pr0n/src/js/components/app.js	/stuff/;"	v	lineno:111	type:boolean
+style	/home/moresilenter/code/pr0n/src/js/components/app-charcart.js	/style/;"	v	lineno:67
+style	/home/moresilenter/code/pr0n/src/js/components/app-compatibility.js	/style/;"	v	lineno:14	type:boolean
+sum	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/sum/;"	v	lineno:126	namespace:activePlayer.player	type:number
+sum	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/sum/;"	v	lineno:126	namespace:player	type:number
+sumList	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/sumList/;"	f	lineno:171	namespace:player.prototype	type:!this.sum function()
+temp_titles	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/temp_titles/;"	v	lineno:98	type:[string]
+this	/home/moresilenter/code/pr0n/src/js/components/app-addtolist.js	/this/;"	v	lineno:14	namespace:onClick
+this	/home/moresilenter/code/pr0n/src/js/components/app.js	/this/;"	v	lineno:109	namespace:stage
+thisList	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/thisList/;"	v	lineno:128	namespace:player.prototype.addToList	type:[player.traits.<i>]
+thisList	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/thisList/;"	v	lineno:141	namespace:player.prototype.removeFromList	type:[player.traits.<i>]
+thoughts	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/thoughts/;"	v	lineno:14	type:[string]
+title_list	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/title_list/;"	v	lineno:16	type:[string]
+trait_list	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/trait_list/;"	v	lineno:17	type:[?]
+traits	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/traits/;"	v	lineno:124	namespace:activePlayer.player	type:[player.traits.<i>]
+traits	/home/moresilenter/code/pr0n/src/js/stores/app-store.js	/traits/;"	v	lineno:124	namespace:player	type:[player.traits.<i>]
