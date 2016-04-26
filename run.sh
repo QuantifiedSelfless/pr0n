@@ -8,4 +8,4 @@ if [[ -z $pid ]]
       kill -9 $pid
 fi
 
-node server.js $port
+NODE_PATH="./vendor:$NODE_PATH" node server.js $port
