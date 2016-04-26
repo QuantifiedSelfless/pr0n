@@ -300,4 +300,5 @@ body #main > .button {
   display: none; }
 
 #main.finished #display-area {
-  width: 100%; }
+  width: 100%;
+  padding-top: 0; }
