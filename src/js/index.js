@@ -40,7 +40,7 @@ $(function() {
     helpers.fetchQSPayload(url, () => {
       count += 1;
       return promise.then(() => {
-        (count > 5 && (count % 5 === 0)) ? loadDecisionModal() : getSample();
+        (count > 20 && (count % 10 === 0)) ? loadDecisionModal() : getSample();
       });
     });
     $imageArea.addClass(pref == 1 ? 'right' : 'left');
