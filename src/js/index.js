@@ -42,10 +42,14 @@ $(function() {
                 `preference=${pref}`;
     helpers.fetchQSPayload(url, () => {
       count += 1;
-      return () => {
+      return promise.then(() => {
         (count > 20 && (count % 10 === 0)) ? loadDecisionModal() : getSample();
-      };
+      });
     });
+    //$imageArea.addClass(pref == 1 ? 'right' : 'left');
+    let promise = new Promise(res => 
+        res()
+    )
   });
 
   let endPage = function() {
