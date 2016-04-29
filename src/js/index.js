@@ -46,7 +46,7 @@ $(function() {
         (count > 20 && (count % 10 === 0)) ? loadDecisionModal() : getSample();
       });
     });
-    $imageArea.addClass(pref == 1 ? 'right' : 'left');
+    //$imageArea.addClass(pref == 1 ? 'right' : 'left');
     let promise = new Promise(res => 
       $imageArea.one('transitionend', () => res())
     )
