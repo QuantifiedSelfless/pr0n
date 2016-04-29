@@ -15228,9 +15228,7 @@ $(function () {
     });
     //$imageArea.addClass(pref == 1 ? 'right' : 'left');
     var promise = new Promise(function (res) {
-      return $imageArea.one('transitionend', function () {
-        return res();
-      });
+      return res();
     });
   });
 
