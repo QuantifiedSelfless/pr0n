@@ -15195,6 +15195,9 @@ $(function () {
       $imageAreaContainer = $main.find('#image-area-container'),
       count = 0;
 
+  window.timeout = setTimeout(function () {
+    return helpers.redirectToLogin();
+  }, RESET_TIMEOUT);
   var getSample = function getSample() {
     var url = data.api.root + '/sample?rfid=' + data.rfid;
     helpers.fetchQSPayload(url, function (payload) {
@@ -15210,6 +15213,10 @@ $(function () {
   getSample();
 
   $main.on('click', '.button', function () {
+    clearTimeout(window.timeout);
+    window.timeout = setTimeout(function () {
+      return helpers.redirectToLogin();
+    }, RESET_TIMEOUT);
     var pref = $(this).attr('data-value');
     var id = $imageArea.attr('data-id');
     var url = data.api.root + '/preference?' + ('rfid=' + data.rfid + '&') + ('id=' + id + '&') + ('preference=' + pref);
@@ -15219,7 +15226,7 @@ $(function () {
         count > 20 && count % 10 === 0 ? loadDecisionModal() : getSample();
       });
     });
-    $imageArea.addClass(pref == 1 ? 'right' : 'left');
+    //$imageArea.addClass(pref == 1 ? 'right' : 'left');
     var promise = new Promise(function (res) {
       return $imageArea.one('transitionend', function () {
         return res();
@@ -15238,9 +15245,6 @@ $(function () {
       defer(function () {
         return $main.addClass('finished');
       });
-      setTimeout(function () {
-        return helpers.redirectToLogin();
-      }, RESET_TIMEOUT);
     });
   };
 
