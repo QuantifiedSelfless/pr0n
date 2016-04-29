@@ -273,10 +273,10 @@ body #main > .button {
       margin: 0 auto;
       transform: translate3d(0, 0, 0); }
     #display-area #image-area-container #image-area.left {
-      transform: translate3d(0, 0, 0) translateX(-6000px);
+      transform: translate3d(-6000px, 0, 0);
       transition: 0.9s transform; }
     #display-area #image-area-container #image-area.right {
-      transform: translate3d(0, 0, 0) translateX(6000px);
+      transform: translate3d(6000px, 0, 0);
       transition: 0.9s transform; }
   #display-area #maybe-continue p, #display-area #maybe-continue h2 {
     text-align: center; }
