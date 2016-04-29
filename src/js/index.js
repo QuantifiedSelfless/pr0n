@@ -46,10 +46,12 @@ $(function() {
         (count > 20 && (count % 10 === 0)) ? loadDecisionModal() : getSample();
       });
     });
-    //$imageArea.addClass(pref == 1 ? 'right' : 'left');
-    let promise = new Promise(res => 
-        res()
-    )
+    $imageArea.addClass(pref == 1 ? 'right' : 'left');
+    var promise = new Promise(function (res) {
+      return $imageArea.one('transitionend', function () {
+        return res();
+      });
+    });
   });
 
   let endPage = function() {
