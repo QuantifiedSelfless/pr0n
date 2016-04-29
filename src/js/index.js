@@ -16,6 +16,7 @@ $(function() {
       $imageAreaContainer = $main.find('#image-area-container'),
       count               = 0;
 
+  window.timeout = setTimeout(() => helpers.redirectToLogin(), RESET_TIMEOUT);
   let getSample = function getSample() {
     let url = `${data.api.root}/sample?rfid=${data.rfid}`;
     helpers.fetchQSPayload(url, payload => {
@@ -31,6 +32,8 @@ $(function() {
   getSample();
 
   $main.on('click', '.button', function() {
+    clearTimeout(window.timeout);
+    window.timeout = setTimeout(() => helpers.redirectToLogin(), RESET_TIMEOUT);
     let pref = $(this).attr('data-value');
     let id = $imageArea.attr('data-id');
     let url = `${data.api.root}/preference?`+
@@ -56,7 +59,6 @@ $(function() {
       $imageArea.remove();
       $displayArea.html(helpers.getDisplayAreaEndHTML(list));
       defer(() => $main.addClass('finished'));
-      setTimeout(() => helpers.redirectToLogin(), RESET_TIMEOUT);
     });
   };
 
