@@ -48,7 +48,7 @@ $(function() {
     });
     //$imageArea.addClass(pref == 1 ? 'right' : 'left');
     let promise = new Promise(res => 
-      $imageArea.one('transitionend', () => res())
+        res()
     )
   });
 
